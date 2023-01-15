@@ -9,7 +9,7 @@ function App() {
   const [usersList, setUsersList] = useState([]);
   const [userSelected, setUserSelected] = useState(null);
   const[btnUser , setBtnUser] = useState(true);
-  const[popUp,setPopUp] = useState(true);
+  const[popUp,setPopUp] = useState(false);
     // const [deleUp, setdeleUp] = useState(false); 
 
   const create = () =>{
@@ -82,7 +82,7 @@ function App() {
           <div className="container_check">
             <i className="bx bx-check bx-lg bx-burst"></i>
           </div>
-          <h3 className="title">User Delete Succesfully</h3>
+          <h3 className="title">User Deleted Succesfully</h3>
         </div>
         <div
           style={{ display: btnUser ? "none" : "block" }}
