@@ -256,40 +256,43 @@ li:hover {
 @media screen and (min-width: 600px) {
   .btn-create-users {
     position: static;
-
+    width: 180px;
     border-radius: 12px;
     padding: 1rem;
     font-size: 16px;
     font-weight: bold;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    justify-content: space-around;
+    align-items: center; 
   }
 
   .btn-create-users p {
-    display: flex;
+    display: block;
+    
   }
 
   .btn-create-users span {
-    display: block;
+    /* display: block; */
     font-size: 19px;
     /* text-align: center; */
     margin-right: 0.5rem;
   }
 
-  /* ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  } */
 
   .container_form {
     width: 80%;
     margin: 0 auto;
+    top: 5rem;
+ 
+    
   }
 
   form {
     width: 400px;
     margin: 0 auto;
+    
+ 
   }
 
   .titleform {
