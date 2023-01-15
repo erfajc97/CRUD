@@ -63,7 +63,6 @@
 header {
   /* background-color: aquamarine; */
   height: 100px;
-  margin-bottom: 4rem;
 }
 nav {
   /* background-color: aqua; */
@@ -104,15 +103,18 @@ h1 {
 }
 
 main {
+  width: 80%;
   margin: 0 auto;
   position: relative;
+ 
 }
 
 .container_form {
   position: fixed;
-  left: 40%;
-  top: 8.5%;
+  width: 80%;
+  margin: 0 auto;
   z-index: 100;
+  top: 2rem;
 }
 form {
   display: flex;
@@ -169,7 +171,7 @@ input {
 
 ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 2rem;
   
@@ -222,6 +224,32 @@ li:hover{
   top: 1rem;
 }
 
+@media screen and (min-width:600px) {
+  
+
+  ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+
+.container_form {
+  width: 80%;
+  margin: 0 auto;
+ 
+}
+
+form{
+  width: 400px;
+  margin: 0 auto;
+}
+
+
+}
+
+
+/* 
 @media screen and (max-width:600px) {
     ul {
   display: grid;
@@ -248,7 +276,7 @@ li:hover{
 
 .btn-create-users span {
   font-size: 50px;
-  /* text-align: center; */
+
   padding: 0;
   margin: 0;
 
@@ -266,7 +294,7 @@ form {
 }
 
 .container_form{
-  top: 10%;
+  top: 0%;
   left: 8%;
   width: 80%;
   margin: 0 auto;
@@ -276,4 +304,4 @@ form {
 
 
   
-}
+} */

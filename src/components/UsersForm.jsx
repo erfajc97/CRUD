@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-const UsersForm = ({ getSelected, userSelected, getUserList }) => {
+const UsersForm = ({ getSelected, userSelected, getUserList, create }) => {
   const { handleSubmit, register, reset } = useForm();
   const empty = {
     birthday: "",
@@ -93,7 +93,9 @@ const UsersForm = ({ getSelected, userSelected, getUserList }) => {
         <button className="addButton">Submit</button>
       </form>
 
-    
+      <button onClick={create} className="exit_form">
+        <i className="bx bx-x bx-flashing bx-lg"></i>
+      </button>
     </div>
   );
 };

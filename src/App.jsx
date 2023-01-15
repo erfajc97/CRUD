@@ -59,17 +59,15 @@ function App() {
             getSelected={getSelected}
             userSelected={userSelected}
             getUserList={getUserList}
+            create={create}
           />
-          <button onClick={create} className="exit_form">
-            <i className="bx bx-x bx-flashing bx-lg"></i>
-          </button>
+          
         </div>
 
         <UsersList
           usersList={usersList}
           getSelected={getSelected}
           getUserList={getUserList}
-         
         />
       </main>
     </div>
