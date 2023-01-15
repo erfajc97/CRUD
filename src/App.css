@@ -115,6 +115,10 @@ main {
   margin: 0 auto;
   z-index: 100;
   top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 form {
   display: flex;
@@ -126,6 +130,10 @@ form {
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   background-color: rgb(240, 241, 242);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .titleform {
@@ -243,8 +251,18 @@ li:hover{
 form{
   width: 400px;
   margin: 0 auto;
+  
 }
 
+.titleform{
+  position: relative;
+}
+.exit_form{
+  width: 20%;
+  position: absolute;
+  top: 2rem;
+  right: 0.5rem;
+}
 
 }
 

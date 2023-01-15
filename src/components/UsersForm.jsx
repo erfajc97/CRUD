@@ -40,6 +40,9 @@ const UsersForm = ({ getSelected, userSelected, getUserList, create }) => {
     <div>
       <form onSubmit={handleSubmit(submit)}>
         <h2 className="titleform">New User</h2>
+        <button onClick={create} className="exit_form">
+          <i className="bx bx-x bx-flashing bx-lg"></i>
+        </button>
 
         <div className="input_container">
           <label htmlFor="name">Name</label>
@@ -92,10 +95,6 @@ const UsersForm = ({ getSelected, userSelected, getUserList, create }) => {
 
         <button className="addButton">Submit</button>
       </form>
-
-      <button onClick={create} className="exit_form">
-        <i className="bx bx-x bx-flashing bx-lg"></i>
-      </button>
     </div>
   );
 };
