@@ -22,7 +22,7 @@ function App() {
     setPopUp(boolean);
     setTimeout(() => {
        setPopUp(false);
-    }, 1000);
+    }, 2300);
     
     return text
  }
