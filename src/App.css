@@ -266,10 +266,10 @@ li:hover {
   box-shadow: 0 4px 8px rgb(0, 0, 0);
   gap: 1rem;
   background-color: aliceblue;
-  position: absolute;
+  position: fixed;
   z-index: 200;
-  top:15rem;
-  left:5%;
+  top:16rem;
+  left:20%;
   
 }
 .container_check{
@@ -332,8 +332,8 @@ li:hover {
 
   .container_pop-up{
 
-  top: 15rem;
-  left:40%;
+  top: 25rem;
+  left:45%;
   
 }
 }

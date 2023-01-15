@@ -9,7 +9,7 @@ function App() {
   const [usersList, setUsersList] = useState([]);
   const [userSelected, setUserSelected] = useState(null);
   const[btnUser , setBtnUser] = useState(true);
-  const[popUp,setPopUp] = useState(false);
+  const[popUp,setPopUp] = useState(true);
     // const [deleUp, setdeleUp] = useState(false); 
 
   const create = () =>{
