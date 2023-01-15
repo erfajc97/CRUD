@@ -10,31 +10,37 @@ function App() {
   const [userSelected, setUserSelected] = useState(null);
   const[btnUser , setBtnUser] = useState(true);
   const[popUp,setPopUp] = useState(false);
-    const [deleUp, setdeleUp] = useState(false); 
+    // const [deleUp, setdeleUp] = useState(false); 
 
   const create = () =>{
     setBtnUser(!btnUser)
-    setUserSelected(null)
+    // setUserSelected(null)
   }
 
- const deleteAlert = (boolean) =>{
+
+ const deleteAlert = (boolean ,text) =>{
     setPopUp(boolean);
     setTimeout(() => {
        setPopUp(false);
     }, 1000);
+    
+    return text
  }
- const updateAlert = (boolean) => {
-   setPopUp(boolean);
-   setTimeout(() => {
-     setPopUp(false);
-   }, 1000);
- };
-  const createAlert = (boolean) => {
-    setPopUp(boolean);
-    setTimeout(() => {
-      setPopUp(false);
-    }, 1000);
-  };
+
+ const valuePopUp = deleteAlert;
+
+//  const updateAlert = (boolean) => {
+//    setPopUp(boolean);
+//    setTimeout(() => {
+//      setPopUp(false);
+//    }, 1000);
+//  };
+  // const createAlert = (boolean) => {
+  //   setPopUp(boolean);
+  //   setTimeout(() => {
+  //     setPopUp(false);
+  //   }, 1000);
+  // };
 
   useEffect(() => {
     axios
@@ -69,23 +75,15 @@ function App() {
         </nav>
       </header>
       <main>
+      
         <div
           style={{ display: popUp ? "flex" : "none" }}
           className="container_pop-up">
           <div className="container_check">
             <i className="bx bx-check bx-lg bx-burst"></i>
           </div>
-          <h3 className="title">User Deleted Succesfully</h3>
+          <h3 className="title">User Delete Succesfully</h3>
         </div>
-
-        {/* <div
-          style={{ display: deleUp ? "flex" : "none" }}
-          className="container_pop-up">
-          <div className="container_check">
-            <i className="bx bx-check bx-lg bx-burst"></i>
-          </div>
-          <h3 className="title">User Created Succesfully</h3>
-        </div> */}
         <div
           style={{ display: btnUser ? "none" : "block" }}
           className="container_form  ">

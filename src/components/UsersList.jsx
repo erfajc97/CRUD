@@ -14,7 +14,7 @@ ${user.id}/`
       )
       .then(() => {
         getUserList();
-        deleteAlert(true)
+        deleteAlert(true, "Deleted")
       
       });
   };
@@ -23,7 +23,7 @@ ${user.id}/`
     <div>
       <ul>
         {orderUsers.map((userList) => (
-          <li key={userList.email}>
+          <li key={userList.id}>
             <h2>
               {userList.first_name} {userList.last_name}{" "}
             </h2>
