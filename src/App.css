@@ -132,7 +132,7 @@ main {
 
 .container_form {
   position: fixed;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   z-index: 100;
   top: 2rem;
@@ -253,6 +253,31 @@ li:hover {
   top: 1rem;
 }
 
+.container_pop-up{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0.25rem solid;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+  gap: 1rem;
+  background-color: aliceblue;
+  position: absolute;
+  z-index: 200;
+  top:15rem;
+  left:5%;
+  
+}
+.container_check{
+  background-color: rgb(12, 222, 152);
+  color: aliceblue;
+  border-radius: 50%;
+}
+
 @media screen and (min-width: 600px) {
   .btn-create-users {
     position: static;
@@ -281,7 +306,7 @@ li:hover {
 
 
   .container_form {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     top: 5rem;
  
@@ -304,6 +329,13 @@ li:hover {
     top: 2rem;
     right: 0.5rem;
   }
+
+  .container_pop-up{
+
+  top: 15rem;
+  left:40%;
+  
+}
 }
 
 /* 

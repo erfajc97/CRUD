@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-const UsersForm = ({ getSelected, userSelected, getUserList, create }) => {
+const UsersForm = ({ getSelected, userSelected, getUserList, create,createAlert }) => {
   const { handleSubmit, register, reset } = useForm();
   const empty = {
     birthday: "",
@@ -32,13 +32,16 @@ const UsersForm = ({ getSelected, userSelected, getUserList, create }) => {
       axios.post(`https://users-crud.academlo.tech/users/`, data).then(() => {
         getUserList();
         reset(empty);
+        create();
+        // createAlert(true)
+
       });
     }
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit(submit)}>
+      <form onSubmit={handleSubmit(submit) }>
         <h2 className="titleform">New User</h2>
         <button onClick={create} className="exit_form">
           <i className="bx bx-x bx-flashing bx-lg"></i>

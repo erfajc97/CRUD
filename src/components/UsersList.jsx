@@ -1,13 +1,10 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 
-const UsersList = ({ usersList, getSelected, getUserList, update }) => {
+const UsersList = ({ usersList, getSelected, getUserList, deleteAlert }) => {
   const orderUsers = usersList.sort((a, b) =>
     a.first_name.localeCompare(b.first_name)
   );
-
-
-  
 
   const btnDelete = (user) => {
     axios
@@ -17,6 +14,8 @@ ${user.id}/`
       )
       .then(() => {
         getUserList();
+        deleteAlert(true)
+      
       });
   };
 

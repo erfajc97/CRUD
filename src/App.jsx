@@ -9,15 +9,32 @@ function App() {
   const [usersList, setUsersList] = useState([]);
   const [userSelected, setUserSelected] = useState(null);
   const[btnUser , setBtnUser] = useState(true);
+  const[popUp,setPopUp] = useState(false);
+    const [deleUp, setdeleUp] = useState(false); 
 
   const create = () =>{
     setBtnUser(!btnUser)
     setUserSelected(null)
   }
 
- 
-
- 
+ const deleteAlert = (boolean) =>{
+    setPopUp(boolean);
+    setTimeout(() => {
+       setPopUp(false);
+    }, 1000);
+ }
+ const updateAlert = (boolean) => {
+   setPopUp(boolean);
+   setTimeout(() => {
+     setPopUp(false);
+   }, 1000);
+ };
+  const createAlert = (boolean) => {
+    setPopUp(boolean);
+    setTimeout(() => {
+      setPopUp(false);
+    }, 1000);
+  };
 
   useEffect(() => {
     axios
@@ -53,6 +70,23 @@ function App() {
       </header>
       <main>
         <div
+          style={{ display: popUp ? "flex" : "none" }}
+          className="container_pop-up">
+          <div className="container_check">
+            <i className="bx bx-check bx-lg bx-burst"></i>
+          </div>
+          <h3 className="title">User Deleted Succesfully</h3>
+        </div>
+
+        {/* <div
+          style={{ display: deleUp ? "flex" : "none" }}
+          className="container_pop-up">
+          <div className="container_check">
+            <i className="bx bx-check bx-lg bx-burst"></i>
+          </div>
+          <h3 className="title">User Created Succesfully</h3>
+        </div> */}
+        <div
           style={{ display: btnUser ? "none" : "block" }}
           className="container_form  ">
           <UsersForm
@@ -60,11 +94,11 @@ function App() {
             userSelected={userSelected}
             getUserList={getUserList}
             create={create}
+            // createAlert={createAlert}
           />
-          
         </div>
-
         <UsersList
+          deleteAlert={deleteAlert}
           usersList={usersList}
           getSelected={getSelected}
           getUserList={getUserList}
