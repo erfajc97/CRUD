@@ -77,9 +77,8 @@ h1 {
   box-shadow: 0 4px 8px rgb(0, 0, 0);
 }
 
-.btn-create-users {
-  background-color: #555a88;
-  color: aliceblue;
+/* .btn-create-users {
+ 
   border-radius: 12px;
   padding: 1rem;
   font-size: 16px;
@@ -92,14 +91,43 @@ h1 {
   align-items: center;
 }
 
-.btn-create-users:hover {
-  transform: scale(1.1);
-}
+
 
 .btn-create-users span {
   font-size: 19px;
   text-align: center;
   margin-right: 0.5rem;
+} */
+
+.btn-create-users{
+   background-color: #555a88;
+  color: aliceblue;
+  border-radius: 50%;
+  position: fixed;
+  right: 3.5rem;
+  bottom: 8rem;
+  z-index: 90;
+  width: 80px;
+  height: 80px;
+  text-shadow: 0 4px 8px rgb(0, 0, 0);
+  box-shadow: 0 4px 8px rgb(0, 0, 0);
+ 
+}
+.btn-create-users p{
+  display: none;
+  
+}
+
+.btn-create-users span {
+  font-size: 50px;
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.btn-create-users:hover {
+  transform: scale(1.1);
 }
 
 main {
@@ -236,6 +264,33 @@ li:hover{
 
 @media screen and (min-width:600px) {
   
+.btn-create-users {
+
+  position: static;
+ 
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-create-users p{
+  display: flex;
+
+  
+}
+
+
+.btn-create-users span {
+  display: block;
+  font-size: 19px;
+  /* text-align: center; */
+  margin-right: 0.5rem;
+}
+
 
   ul {
   display: grid;
