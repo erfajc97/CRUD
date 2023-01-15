@@ -111,7 +111,7 @@ main {
 .container_form {
   position: fixed;
   left: 40%;
-  top: 20.5%;
+  top: 8.5%;
   z-index: 100;
 }
 form {
@@ -260,13 +260,13 @@ main{
 }
 form {
   width: 80%;
-  padding: 1rem 2.5rem;
+  padding: 1rem 3.5rem;
   margin: 0 auto;
  
 }
 
 .container_form{
-  top: 15%;
+  top: 10%;
   left: 8%;
   width: 80%;
   margin: 0 auto;

@@ -12,7 +12,7 @@ function App() {
 
   const create = () =>{
     setBtnUser(!btnUser)
-
+    setUserSelected(null)
   }
 
  
@@ -69,7 +69,7 @@ function App() {
           usersList={usersList}
           getSelected={getSelected}
           getUserList={getUserList}
-          // update={update}
+         
         />
       </main>
     </div>
